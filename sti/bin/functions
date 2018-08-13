@@ -118,4 +118,7 @@ function clear_maven_repository() {
 function clear_source() {
   echo "[INFO] DELETE ${HOME}/source"
     rm -rf ${HOME}/source
+  echo "[INFO] DELETE /tmp/src"
+  rm -rf /tmp/src/
+  mkdir -p /tmp/src  
 }
