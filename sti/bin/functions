@@ -113,3 +113,9 @@ function clear_maven_repository() {
       rm -rf ${HOME}/.m2/repository/*
     fi
 }
+
+#clear local source
+function clear_source() {
+  echo "[INFO] DELETE ${HOME}/source"
+    rm -rf ${HOME}/source
+}

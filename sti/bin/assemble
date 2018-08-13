@@ -88,7 +88,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   AID=$(get_pom_property project.artifactId)
   VER=$(get_pom_property project.version)
   echo "[INFO] app info: ${AID}-${VER}"
-
+  
   # Copy built artifacts (if any!) from the target/ directory
   # (or $ARTIFACT_DIR if specified)
   # to the $DEPLOY_DIR directory for later deployment
@@ -164,5 +164,7 @@ fi
 
 echo "[INFO] ${DEPLOY_DIR}/*${APP_SUFFIX}.jar"
 ls ${DEPLOY_DIR}/*${APP_SUFFIX}.jar
+echo "[INFO] clear_source"
+clear_source
 
 exit 0
