@@ -1,0 +1,10 @@
+version: "3"
+services:
+  java:
+    image: docker.vpclub.cn/hidevopsio/hinode-java-jar:1.15
+    ports:
+      - 8080:8080
+      - 7575:7575
+    volumes:
+      - /var/lib/docker:/var/lib/docker
+      - /var/run/docker.sock:/var/run/docker.sock
